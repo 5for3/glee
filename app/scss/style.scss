@@ -138,7 +138,105 @@ header {
 
 // footer #############################################
 
+.footer{
+  padding-top: 75px;
+  @extend %rubik-400;
+  font-size: 14px;
+  line-height: 26px;
+  & .logo{
+    margin-bottom: 20px;
+  }
+  &__inner{
+    display: flex;
+    flex-direction: column;
+  }
+  &__top{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 70px;
+    border-bottom: 1px solid #dae4e9;
+  }
+  &__top a{
+    display: block;
+  }
+  &__top--item{
+    width: 200px;
+  }
+  &__top--item + .footer__top--item{
+    margin-left: 100px;
+  }
+  &__top--title{
+    @extend %dmsans-700;
+    font-size: 16px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  &__top--list{
+    color: $menu-list;
+  }
+  &__top--list li{
+    margin-bottom: 8px;
+  }
+  &__top--item-form{
+    width: 270px;
+  }
+  &__top--text{
+    margin-bottom: 30px;
+    color: $menu-list;
+  }
+  &__top--form{
+    display: flex;
+  }
+  &__top--input{
+    background-color:#fef7f0;
+    border: none;
+    outline: transparent;
+    color: $input;
+    width: 170px;
+    height: 34px;
+    padding-left: 17px;
+    padding-right: 10px;
+  }
+  &__top--input::placeholder{
+    color: $input;
+  }
+  &__top--button{
+    height: 34px;
+    padding: 0 17px;
+    color: #fff;
+    background-color: #a3bbc8;
+    border: none;
+    cursor: pointer;
+  }
+  &__bot{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    color: $menu-list;
+  }
+  &__bot--menu{
+    display: flex;
+  }
+  &__bot--menu-line{
+    margin-top: 5px;
+    width: 3px;
+    height: 17px;
+    background-color: $menu-list;
+    margin-left: 12px;
+    margin-right: 12px;
+  }
+}
 
+.footer__top--addres, .footer__top--phone, .footer__top--email{
+  margin-bottom: 12px;
+  color: $menu-list;
+}
+.logo{
+  @extend %dmsans-700;
+}
 
 
 @import 'media';
