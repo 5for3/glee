@@ -4,5 +4,141 @@
 @import 'fonts';
 
 
+// header ###################
+
+
+header {
+  max-width: 1790px;
+  padding: 46px 10px;
+  margin: 0 auto;
+  height: 144px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  &__img {
+    display: inline-block;
+  }
+  &__text {
+    font-size: 36px;
+    line-height: 58px;
+    position: relative;
+    top: -6px;
+  }
+}
+
+.nav {
+  display: flex;
+  @extend %rubik-500;
+  font-size: 15px;
+  line-height: 12px;
+  &__item {
+    margin: auto 0;
+  }
+  &__item+.nav__item {
+    margin-left: 30px;
+  }
+}
+
+.menu {
+  display: flex;
+  &__item {
+    height: 52px;
+  }
+  &__item+.menu__item {
+    margin-left: 44px;
+  }
+  &__search {
+    width: 52px;
+    background-color: #edf1f4;
+    border-radius: 50%;
+  }
+  &__item-search{
+    padding: 18px;
+    cursor: pointer;
+  }
+  &__user {
+    display: flex;
+    width: 126px;
+    background-color: #fcd7b6;
+    position: relative;
+  }
+  &__user::before{
+    content: '';
+    width: 52px;
+    height: 52px;
+    background-color: #fcd7b6;
+    border-radius: 50%;
+    position: absolute;
+    left: -26px;
+  }
+  &__user::after {
+    content: '';
+    width: 52px;
+    height: 52px;
+    background-color: #fcd7b6;
+    border-radius: 50%; 
+    position: absolute;
+    right: -26px; 
+  }
+  &__item--like{
+    position: absolute;
+    bottom: -10px;
+    left: 21px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  &__item--like-quantity, .menu__item--cart-quantity{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: -10px;
+    right: 12px;
+    @extend %dmsans-400;
+    font-size: 10px;
+    text-align: center;
+    padding-top: 3px;
+  }
+  &__item--cart{
+    position: absolute;
+    bottom: -10px; 
+    right: 0px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+  }
+  &__user--line{
+    width: 1px;
+    height: 32px;
+    background-color: #fde7d3;
+    position: absolute;
+    left: 62px;
+    bottom: 10px;
+  }
+  &__dots{
+    width: 52px;
+    background-color: $accent;
+    border-radius: 50%;
+  }
+  &__item--dots{
+    padding: 16px;
+    cursor: pointer;
+  }
+}
+
+
+
+
+// footer #############################################
+
+
+
 
 @import 'media';
