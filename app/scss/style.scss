@@ -307,6 +307,7 @@
   left: 550px;
   & button{
     background-color: #fde3cc;
+    padding-top: 2px;
     width: 29px;
     height: 29px;
     border: none;
@@ -321,6 +322,52 @@
     background-color: #fff;
 }
 
+
+// features ##############################3
+
+
+.features{
+  &__inner{
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+  &__item{
+    display: flex;
+  }
+  &__item--info{
+    margin-left: 25px;
+  }
+  &__item--title{
+    color: #414141;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &__item--text{
+    @extend %dmsans-400;
+    width: 200px;
+    line-height: 30px;
+    color: #585858;
+  }
+  &__item--content{
+    position: relative;
+  }
+  &__item--circle{
+    position: absolute;
+    right: -5px;
+    bottom: 40px;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(#dfe3e2, .34);
+    width: 20px;
+    height: 20px;
+  }
+  &__item--circle-delivery{
+    bottom: 55px;
+  }
+}
 
 
 
