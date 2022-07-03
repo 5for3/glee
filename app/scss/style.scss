@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'global';
 @import 'reset';
+@import 'libs';
 @import 'fonts';
 
 
@@ -207,7 +208,7 @@
     height: 34px;
     padding: 0 17px;
     color: #fff;
-    background-color: #a3bbc8;
+    background-color: $buttons;
     border: none;
     cursor: pointer;
   }
@@ -238,6 +239,89 @@
 .logo{
   @extend %dmsans-700;
 }
+
+// main ###############################
+
+//  slider top   ############################
+
+.slider-top{
+  &__wrap{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 225px;
+    height: 819px;
+  }
+  &__item--content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image{
+    margin-top: 53px;
+
+
+  }
+  &__content--title{
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  &__content--text{
+    @extend %rubik-400;
+    color: $default;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 370px;
+    margin-bottom: 30px;
+  }
+  &__content--button{
+    font-size: 15px;
+    @extend %rubik-500;
+    line-height: 12px;    
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    background-color: $buttons;
+    display: block;
+    padding-top: 25px;
+    padding-left: 27px;
+    position: relative;
+    right: -1px;
+  }
+  &__content--arrow{
+    position: absolute;
+    top: 26px;
+    right: 18px;
+  }
+}
+// slick-slider #########
+
+.slick-dots{
+  display: flex;
+  position: absolute;
+  bottom: -205px;
+  left: 550px;
+  & button{
+    background-color: #fde3cc;
+    width: 29px;
+    height: 29px;
+    border: none;
+    border-radius: 50%;
+    @extend %rubik-500;
+    font-size: 11px;
+    color: $input;
+    margin-right: 11px;
+  }
+}
+.slick-active button{
+    background-color: #fff;
+}
+
+
 
 
 @import 'media';
