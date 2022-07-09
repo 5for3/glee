@@ -7,4 +7,8 @@ $(function () {
     autoplay: true,
     autoplaySpead: 3000
   })
+
+
+
+  var mixer = mixitup('.products__list');
 })
