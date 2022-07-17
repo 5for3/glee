@@ -208,7 +208,7 @@
     height: 34px;
     padding: 0 17px;
     color: #fff;
-    background-color: $buttons;
+    background-color: $accent;
     border: none;
     cursor: pointer;
   }
@@ -285,7 +285,7 @@
     width: 200px;
     height: 60px;
     color: #fff;
-    background-color: $buttons;
+    background-color: $accent;
     display: block;
     padding-top: 25px;
     padding-left: 27px;
@@ -428,7 +428,7 @@
   }
   &__item--price{
     line-height: 1;
-    color: $buttons;
+    color: $accent;
     text-align: center;
     margin-top: 15px;
   }
@@ -567,6 +567,7 @@
     padding-left: 35px;
     background-color: #f8f8f8;
     margin-bottom: 35px;
+    border-radius: 4px;
   }
   &__item--title{
     font-size: 20px;
@@ -575,7 +576,7 @@
     margin-bottom: 15px;
   }
   &__item--text{
-    color: $buttons;
+    color: $accent;
   }
   &__item--image{
     padding-left: 65px;
@@ -590,6 +591,7 @@
 // video ##############
 
 .video{
+  padding-top: 85px;
   &__bg{
     display: flex;
     justify-content: center;
@@ -603,7 +605,144 @@
   }
 }
 
+// blog################33
 
+
+.blog{
+  height: 620px;
+  background: linear-gradient(to bottom, #fff 450px, #fef7f0 170px);
+  &__top{
+    padding-top: 114px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__more{
+    color: #262626;
+    padding-right: 25px;
+    position: relative;
+    top: 10px;
+    right: 25px;
+  }
+  &__more::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 2px;
+    height: 12px;
+    width: 7px;
+    background-image: url(../images/small-arrow.png);
+  }
+  &__item{
+    border-radius: 4px;
+    position: relative;
+  }
+  &__item--img{
+    height: 250px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item--badge{
+    height: 30px;
+    width: 80px;
+    background-color: $accent;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 7px 19px;
+    padding-top: 9px;
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    bottom: 158px;
+  }
+  &__item--badge::before{
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  &__item--badge::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  &__item--content{
+    height: 170px;
+    padding-left: 28px;
+    background-color: #fff;
+  }
+  &__item--title{
+    padding-top: 35px;
+    font-size: 18px;
+    line-height: 1;
+    max-width: 290px;
+    @extend %dmsans-500;
+    color: #262626;
+    height: 110px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &__item--data{
+    font-size: 12px;
+    @extend %rubik-400;
+    line-height: 1;
+    color: #222933;
+    display: flex;
+    margin-top: 23px;
+  }
+  &__item--time{
+    padding-left: 17px;
+    position: relative;
+  }
+  &__item--time::before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    left: 0;
+    top: -2px;
+    background-image: url(../images/calendar-day.svg);
+  }
+  &__item--author{
+    margin-left: 25px;
+    padding-left: 17px;
+    position: relative;
+  }
+  &__item--author::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    left: 0;
+    top: -2px;
+    background-image: url(../images/user.svg);
+  }
+}
+
+.partners{
+  background-color: #fef7f0;
+  padding-top: 90px;
+  padding-bottom: 80px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
 
 
 .mixitup-control-active{
