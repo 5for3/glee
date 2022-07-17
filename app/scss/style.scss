@@ -1,13 +1,15 @@
 @import 'vars';
 @import 'global';
 @import 'reset';
+@import 'libs';
 @import 'fonts';
 
 
 // header ###################
 
 
-header {
+.header {
+  width: 100%;
   max-width: 1790px;
   padding: 46px 10px;
   margin: 0 auto;
@@ -206,7 +208,7 @@ header {
     height: 34px;
     padding: 0 17px;
     color: #fff;
-    background-color: #a3bbc8;
+    background-color: $accent;
     border: none;
     cursor: pointer;
   }
@@ -238,5 +240,513 @@ header {
   @extend %dmsans-700;
 }
 
+// main ###############################
+
+//  slider top   ############################
+
+.slider-top{
+  &__wrap{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    padding-top: 225px;
+    height: 819px;
+  }
+  &__item--content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__image{
+    margin-top: 53px;
+
+
+  }
+  &__content--title{
+    @extend %rubik-500;
+    font-size: 72px;
+    line-height: 70px;
+    color: #243f4d;
+    font-weight: 700;
+    margin-bottom: 28px;
+    text-transform: uppercase;
+  }
+  &__content--text{
+    @extend %rubik-400;
+    color: $default;
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 370px;
+    margin-bottom: 30px;
+  }
+  &__content--button{
+    font-size: 15px;
+    @extend %rubik-500;
+    line-height: 12px;    
+    width: 200px;
+    height: 60px;
+    color: #fff;
+    background-color: $accent;
+    display: block;
+    padding-top: 25px;
+    padding-left: 27px;
+    position: relative;
+    right: -1px;
+  }
+  &__content--arrow{
+    position: absolute;
+    top: 26px;
+    right: 18px;
+  }
+}
+// slick-slider #########
+
+.slick-dots{
+  display: flex;
+  position: absolute;
+  bottom: -205px;
+  left: 550px;
+  
+  & button{
+    background-color: #fde3cc;
+    padding-top: 2px;
+    width: 29px;
+    height: 29px;
+    border: none;
+    border-radius: 50%;
+    @extend %rubik-500;
+    font-size: 11px;
+    color: $input;
+    margin-right: 11px;
+    cursor: pointer;
+  }
+}
+.slick-active button{
+    background-color: #fff;
+}
+
+
+// features ##############################3
+
+
+.features{
+  &__inner{
+    padding: 45px 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: #fef7f0;
+  }
+  &__item{
+    display: flex;
+  }
+  &__item--info{
+    margin-left: 25px;
+  }
+  &__item--title{
+    color: #414141;
+    font-size: 18px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+  &__item--text{
+    @extend %dmsans-400;
+    width: 200px;
+    line-height: 30px;
+    color: #585858;
+  }
+  &__item--content{
+    position: relative;
+  }
+  &__item--circle{
+    position: absolute;
+    right: -5px;
+    bottom: 40px;
+    display: block;
+    border-radius: 50%;
+    background-color: rgba(#dfe3e2, .34);
+    width: 20px;
+    height: 20px;
+  }
+  &__item--circle-delivery{
+    bottom: 55px;
+  }
+}
+
+// products #################################################
+.products{
+  margin-top: 75px;
+  margin-bottom: 185px;
+  &__title{
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  &__nav{
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  &__btn{
+    border: none;
+    background-color: transparent;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s;
+  }
+  &__btn + .products__btn{
+    margin-left: 25px;
+  }
+  &__list{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item{
+    height: 380px;
+    width: 270px;
+    background-color: #fff;
+    padding: 20px 15px 35px 15px;
+    margin-bottom: 40px;
+    box-shadow: 6px 6px 50px rgba( #000, .05);
+  }
+  &__item--img-wrap{
+    height: 215px;
+    width: 100%;
+    position: relative;
+  }
+  &__item--img{
+    position: absolute;
+    bottom: 0;
+    right: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__item--title{
+    margin-top: 85px;
+    color: #243f4d;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1;
+  }
+  &__item--price{
+    line-height: 1;
+    color: $accent;
+    text-align: center;
+    margin-top: 15px;
+  }
+  &__item--choise{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 12px;
+    padding-left: 35px;
+    z-index: 5;
+    display: none;
+  }
+  &__choise--items{
+    height: 45px;
+    width: 45px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding-top: 13px;
+    padding-left: 11px;
+    border: 1px solid #a3bac7;
+    cursor: pointer;
+    transition: all .3s;
+  }
+  &__choise--items + .products__choise--items{
+    margin-left: 16px;
+  }
+  &__choise--items:hover{
+    background-color: #a3bac7;
+  }
+  &__choise--items:hover img{
+    filter: brightness(10);
+  }
+  &__item:hover .products__item--choise{
+    display: flex;
+  }
+}
+
+
+// lights ##################################
+
+.lights{
+  margin-top: 40px;
+  &__inner{
+    display: flex;
+  }
+  &__item{
+    background-color: #feefe2;
+    width: 100%;
+    height: 390px;
+    padding-left: 135px;
+    display: flex;
+    position: relative;
+  }
+  &__item + .lights__item {
+    margin-left: 30px;
+  }
+  &__item--img{
+    position: relative;
+    top: -100px;
+  }
+  &__content{
+    max-width: 292px;
+    padding-bottom: 82px;
+    padding-top: 82px;
+    margin-left: 35px;
+  }
+  &__content--position{
+    padding-top: 90px;
+  }
+  &__item--title{
+    font-size: 26px;
+    color: #243f4d;
+    line-height: 32px;
+    margin-bottom: 14px;
+    width: 270px;
+  }
+  &__item--text{
+    font-size: 16px;
+    color: #243f4d;
+    line-height: 26px;
+    margin-bottom: 33px;
+  }
+  &__item--button {
+    font-size: 15px;
+    line-height: 12px;
+    width: 180px;
+    height: 60px;
+    color: $default;
+    background-color: transparent;
+    display: block;
+    border: 1px solid #b3b7b5;
+    border-radius: 4px;
+    padding-top: 23px;
+    padding-left: 20px;
+    position: absolute;
+    bottom: 100px;
+  }
+  &__item--arrow {
+    display: inline-block;
+    margin-left: 45px;
+  }
+}
+
+// design#####################
+.design{
+  margin-top: 105px;
+  &__title {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  &__nav {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s;
+  }
+  &__btn + .design__btn {
+    margin-left: 25px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  &__item{
+    height: 246px;
+    width: 370px;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-left: 35px;
+    background-color: #f8f8f8;
+    margin-bottom: 35px;
+    border-radius: 4px;
+  }
+  &__item--title{
+    font-size: 20px;
+    color: #191919;
+    max-width: 175px;
+    margin-bottom: 15px;
+  }
+  &__item--text{
+    color: $accent;
+  }
+  &__item--image{
+    padding-left: 65px;
+    position: relative;
+    bottom: 30px;
+  }
+  &__item--category-f{
+    padding-left: 165px;
+  }
+}
+
+// video ##############
+
+.video{
+  padding-top: 85px;
+  &__bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  &__popup--img{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+// blog################33
+
+
+.blog{
+  height: 620px;
+  background: linear-gradient(to bottom, #fff 450px, #fef7f0 170px);
+  &__top{
+    padding-top: 114px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__title{
+    margin-bottom: 50px;
+  }
+  &__more{
+    color: #262626;
+    padding-right: 25px;
+    position: relative;
+    top: 10px;
+    right: 25px;
+  }
+  &__more::after{
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 2px;
+    height: 12px;
+    width: 7px;
+    background-image: url(../images/small-arrow.png);
+  }
+  &__item{
+    border-radius: 4px;
+    position: relative;
+  }
+  &__item--img{
+    height: 250px;
+  }
+  &__content{
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item--badge{
+    height: 30px;
+    width: 80px;
+    background-color: $accent;
+    color: #fff;
+    font-size: 14px;
+    line-height: 1;
+    text-transform: uppercase;
+    padding: 7px 19px;
+    padding-top: 9px;
+    position: absolute;
+    z-index: 2;
+    left: 40px;
+    bottom: 158px;
+  }
+  &__item--badge::before{
+    content: '';
+    position: absolute;
+    left: -12px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  &__item--badge::after {
+    content: '';
+    position: absolute;
+    right: -12px;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: $accent;
+  }
+  &__item--content{
+    height: 170px;
+    padding-left: 28px;
+    background-color: #fff;
+  }
+  &__item--title{
+    padding-top: 35px;
+    font-size: 18px;
+    line-height: 1;
+    max-width: 290px;
+    @extend %dmsans-500;
+    color: #262626;
+    height: 110px;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  &__item--data{
+    font-size: 12px;
+    @extend %rubik-400;
+    line-height: 1;
+    color: #222933;
+    display: flex;
+    margin-top: 23px;
+  }
+  &__item--time{
+    padding-left: 17px;
+    position: relative;
+  }
+  &__item--time::before{
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    left: 0;
+    top: -2px;
+    background-image: url(../images/calendar-day.svg);
+  }
+  &__item--author{
+    margin-left: 25px;
+    padding-left: 17px;
+    position: relative;
+  }
+  &__item--author::before {
+    content: '';
+    position: absolute;
+    width: 11px;
+    height: 13px;
+    left: 0;
+    top: -2px;
+    background-image: url(../images/user.svg);
+  }
+}
+
+.partners{
+  background-color: #fef7f0;
+  padding-top: 90px;
+  padding-bottom: 80px;
+  &__list{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+.mixitup-control-active{
+  color: #191919;
+}
 
 @import 'media';
