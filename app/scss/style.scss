@@ -305,6 +305,7 @@
   position: absolute;
   bottom: -205px;
   left: 550px;
+  
   & button{
     background-color: #fde3cc;
     padding-top: 2px;
@@ -316,6 +317,7 @@
     font-size: 11px;
     color: $input;
     margin-right: 11px;
+    cursor: pointer;
   }
 }
 .slick-active button{
@@ -394,7 +396,7 @@
   }
   &__list{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
   }
   &__item{
@@ -488,12 +490,13 @@
     top: -100px;
   }
   &__content{
+    max-width: 292px;
     padding-bottom: 82px;
     padding-top: 82px;
     margin-left: 35px;
   }
   &__content--position{
-    padding-top: 100px;
+    padding-top: 90px;
   }
   &__item--title{
     font-size: 26px;
@@ -529,10 +532,76 @@
   }
 }
 
+// design#####################
+.design{
+  margin-top: 105px;
+  &__title {
+    margin-bottom: 35px;
+    text-align: center;
+  }
+  &__nav {
+    text-align: center;
+    margin-bottom: 75px;
+  }
+  &__btn {
+    border: none;
+    background-color: transparent;
+    color: #8b8b8b;
+    cursor: pointer;
+    padding: 0;
+    transition: all 0.3s;
+  }
+  &__btn + .design__btn {
+    margin-left: 25px;
+  }
+  &__list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  &__item{
+    height: 246px;
+    width: 370px;
+    overflow: hidden;
+    padding-top: 40px;
+    padding-left: 35px;
+    background-color: #f8f8f8;
+    margin-bottom: 35px;
+  }
+  &__item--title{
+    font-size: 20px;
+    color: #191919;
+    max-width: 175px;
+    margin-bottom: 15px;
+  }
+  &__item--text{
+    color: $buttons;
+  }
+  &__item--image{
+    padding-left: 65px;
+    position: relative;
+    bottom: 30px;
+  }
+  &__item--category-f{
+    padding-left: 165px;
+  }
+}
 
-  
+// video ##############
 
-
+.video{
+  &__bg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+  }
+  &__popup--img{
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 
 
 

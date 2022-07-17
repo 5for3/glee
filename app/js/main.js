@@ -11,4 +11,10 @@ $(function () {
 
 
   var mixer = mixitup('.products__list');
+  var mixer2 = mixitup('.design__list', {
+      selectors: {
+      target: '[data-ref="mix"]'
+  }
+  });
+
 })
